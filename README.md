@@ -15,6 +15,8 @@ A modern hosting platform for Minecraft servers, VPS hosting, and Discord bot se
 - ✅ HTTP-only cookie authentication
 - ✅ Dark mode support with theme toggle
 - ✅ Modern UI with animations and effects
+- ✅ Payment verification with FamPay
+- ✅ QR code payment integration
 
 ## Tech Stack
 
@@ -25,6 +27,9 @@ A modern hosting platform for Minecraft servers, VPS hosting, and Discord bot se
 - **Tailwind CSS** - Styling
 - **bcryptjs** - Password hashing
 - **next-themes** - Theme management
+- **Framer Motion** - Animations
+- **Three.js** - 3D graphics
+- **Spline** - 3D design
 
 ## Setup Instructions
 
@@ -139,11 +144,22 @@ Backend authentication system with:
 - **POST /api/auth/logout** - Clear authentication cookie
 - **GET /api/auth/me** - Get current authenticated user
 
+## Dark Mode
+
+The application now supports dark mode with a theme toggle in the navigation bar. Users can switch between light and dark themes based on their preference. The implementation uses:
+- **next-themes** for theme management
+- Custom CSS variables for both light and dark color schemes
+- A theme toggle component in the navigation bar
+
+## Build Process
+
+The application has been optimized for production builds with proper handling of client-side hooks like `useSearchParams` using Suspense boundaries.
+
 ## Deployment
 
 To deploy to production:
 
-1. Push changes to GitHub
+1. Push changes to GitHub (already done)
 2. Run the VPS setup script on your server
 3. The script will automatically pull the latest changes and deploy the application
 
@@ -165,6 +181,38 @@ To deploy to production:
 
 3. Or manually run the commands from `vps-setup.sh` on your VPS
 
-## Dark Mode
+## Payment System
 
-The application now supports dark mode with a theme toggle in the navigation bar. Users can switch between light and dark themes based on their preference.
+The application includes a payment verification system that:
+- Generates QR codes for UPI payments
+- Verifies payment screenshots using AI
+- Processes orders and generates invoices
+- Provides order confirmation and success pages
+
+## Updates on VPS
+
+To update your VPS with the latest changes:
+
+1. SSH into your VPS
+2. Navigate to the application directory:
+   ```bash
+   cd /var/www/sjnode
+   ```
+3. Pull the latest changes:
+   ```bash
+   git pull origin main
+   ```
+4. Install any new dependencies:
+   ```bash
+   npm install
+   ```
+5. Build the application:
+   ```bash
+   npm run build
+   ```
+6. Restart the application:
+   ```bash
+   pm2 restart sjnode
+   ```
+
+This will update your VPS with the latest changes including the dark mode implementation and build fixes.
