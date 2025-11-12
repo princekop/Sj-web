@@ -4,7 +4,6 @@ import type React from "react"
 
 import { useState } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
-import Link from "next/link"
 import { useAuth } from "@/contexts/auth-context"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -65,7 +64,7 @@ export default function LoginPage() {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="••••••••"
+              placeholder="•••••••••"
               required
             />
           </div>
@@ -83,9 +82,9 @@ export default function LoginPage() {
 
         <div className="mt-6 text-center text-sm">
           <span className="text-muted-foreground">Don't have an account? </span>
-          <Link href="/auth/register" className="text-primary hover:underline font-medium">
+          <a href="/auth/register" className="text-primary hover:underline font-medium">
             Sign up
-          </Link>
+          </a>
         </div>
       </div>
     </div>
