@@ -198,11 +198,19 @@ export default function CheckoutPage() {
             <span className="text-primary">₹{total.toFixed(2)}</span>
           </div>
 
-          {/* Refund Policy Link */}
-          <div className="mt-8 pt-6 border-t border-border">
+          {/* Policy Links */}
+          <div className="mt-8 pt-6 border-t border-border space-y-2">
             <Link href="/refund-policy" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors group">
               <Info size={16} className="group-hover:text-blue-400" />
               <span>Read our Refund Policy</span>
+            </Link>
+            <Link href="/terms-of-service" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors group">
+              <Info size={16} className="group-hover:text-blue-400" />
+              <span>Terms of Service</span>
+            </Link>
+            <Link href="/privacy-policy" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors group">
+              <Info size={16} className="group-hover:text-blue-400" />
+              <span>Privacy Policy</span>
             </Link>
           </div>
         </div>

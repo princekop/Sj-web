@@ -231,9 +231,15 @@ export default function PaymentSuccessContent() {
                   Email Support
                 </Button>
               </div>
-              <div className="pt-4 border-t">
-                <Link href="/refund-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <div className="pt-4 border-t space-y-2">
+                <Link href="/refund-policy" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
                   Review our Refund Policy →
+                </Link>
+                <Link href="/terms-of-service" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Terms of Service →
+                </Link>
+                <Link href="/privacy-policy" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Privacy Policy →
                 </Link>
               </div>
             </div>

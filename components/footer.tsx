@@ -148,13 +148,13 @@ export default function Footer() {
             <h4 className="font-bold mb-4 text-sm text-white uppercase tracking-wider">Legal</h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-green-400 transition-colors flex items-center gap-2 group">
+                <Link href="/privacy-policy" className="text-muted-foreground hover:text-green-400 transition-colors flex items-center gap-2 group">
                   <span className="w-1 h-1 bg-green-500/50 rounded-full group-hover:bg-green-400 transition-colors"></span>
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-green-400 transition-colors flex items-center gap-2 group">
+                <Link href="/terms-of-service" className="text-muted-foreground hover:text-green-400 transition-colors flex items-center gap-2 group">
                   <span className="w-1 h-1 bg-green-500/50 rounded-full group-hover:bg-green-400 transition-colors"></span>
                   Terms of Service
                 </Link>
