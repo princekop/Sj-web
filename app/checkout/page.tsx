@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { CheckCircle, ShoppingBag, Clock } from "lucide-react"
+import { CheckCircle, ShoppingBag, Clock, Info } from "lucide-react"
 import { useCart } from "@/contexts/cart-context"
 import { useAuth } from "@/contexts/auth-context"
 import { QRCodeSVG } from 'qrcode.react'
@@ -195,6 +196,14 @@ export default function CheckoutPage() {
           <div className="flex justify-between text-xl font-semibold">
             <span>Total</span>
             <span className="text-primary">₹{total.toFixed(2)}</span>
+          </div>
+
+          {/* Refund Policy Link */}
+          <div className="mt-8 pt-6 border-t border-border">
+            <Link href="/refund-policy" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors group">
+              <Info size={16} className="group-hover:text-blue-400" />
+              <span>Read our Refund Policy</span>
+            </Link>
           </div>
         </div>
       </div>

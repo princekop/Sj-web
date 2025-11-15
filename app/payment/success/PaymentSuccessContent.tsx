@@ -216,7 +216,7 @@ export default function PaymentSuccessContent() {
         {/* Support Card */}
         <Card>
           <CardContent className="pt-6">
-            <div className="text-center space-y-2">
+            <div className="text-center space-y-4">
               <p className="text-sm text-muted-foreground">
                 Need help? Our support team is available 24/7
               </p>
@@ -230,6 +230,11 @@ export default function PaymentSuccessContent() {
                 <Button variant="link" size="sm">
                   Email Support
                 </Button>
+              </div>
+              <div className="pt-4 border-t">
+                <Link href="/refund-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Review our Refund Policy →
+                </Link>
               </div>
             </div>
           </CardContent>

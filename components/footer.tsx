@@ -160,7 +160,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-green-400 transition-colors flex items-center gap-2 group">
+                <Link href="/refund-policy" className="text-muted-foreground hover:text-green-400 transition-colors flex items-center gap-2 group">
                   <span className="w-1 h-1 bg-green-500/50 rounded-full group-hover:bg-green-400 transition-colors"></span>
                   Refund Policy
                 </Link>
