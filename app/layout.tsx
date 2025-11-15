@@ -12,16 +12,6 @@ import { CartPanel } from "@/components/cart-panel"
 import { Toaster } from "@/components/ui/sonner"
 import { ThemeProvider } from "@/components/theme-provider"
 
-import { Inter, Poppins } from 'next/font/google'
-
-// Initialize fonts
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-const poppins = Poppins({ 
-  subsets: ['latin'], 
-  weight: ["300","400","500","600","700","800","900"],
-  variable: '--font-poppins' 
-})
-
 export const metadata: Metadata = {
   title: "SjNodes - Minecraft Hosting, VPS & Discord Bots",
   description: "Premium Minecraft server hosting, VPS solutions, and Discord bot services. reliable, fast, and affordable hosting for gamers and developers.",
@@ -35,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${poppins.variable} font-sans antialiased`} suppressHydrationWarning style={{ fontFamily: 'Helvetica Neue, Helvetica, Arial, sans-serif' }}>
+      <body className="font-sans antialiased" suppressHydrationWarning style={{ fontFamily: 'Helvetica Neue, Helvetica, Arial, sans-serif' }}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
